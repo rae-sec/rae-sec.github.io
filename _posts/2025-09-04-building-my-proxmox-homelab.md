@@ -55,3 +55,36 @@ Here’s a visual overview of my homelab network setup. The main goal was to kee
 
 ![Proxmox Homelab Network Diagram](/Images/Topology.png)
 
+
+## Initial setups
+
+Go ahead and download the Proxmox VE from their website at:
+https://www.proxmox.com/en/
+
+Once you've got it downloaded, you can use Etcher or Rufus, I primarily use Rufus to create a bootable drive. Once you have your flash drive, plug it in and begin installation.
+
+**Warning**! Your data will be lost upon installation of Proxmox, make sure that all valuable data has been extracted from the drives before you begin installation!
+
+![Proxmox Homelab Networking Configuration](/Images/pve-setup-network.png)
+
+This is the most important part of your installation, you will be locked out of your Proxmox virtual environment, having to reinstall it again.
+
+Let's go through the steps one by one, 
+- Your management interface is where network traffic will flow from, typically your ethernet port.
+- Hostname you needn't concern yourself with, but in the case you plan on using it in a domain, I suggest (NAME).home.arpa
+- IP addressing: This IP address will stay the same for the lifespan of your server, Make sure that it is within your range (For example, check your default gateway, if it's 192.168.1.1, then you can make your server 192.168.1.100).
+- Ignore the previous image's netmask value, set it as 255.255.255.0, this is the standard in many cases and you won't have a reason to change it to something else.
+- Gateway: As previously mentioned, this is the same IP address that your 'router' has, so in my case, my router's default gateway is 192.168.255.1
+- And lastly, DNS servers don't matter quite much, you can use a popular one like CloudFlare or Google at 1.1.1.1 and 8.8.8.8 respectively 
+
+With that, click install and have yourself a cup of coffee. Once it's completed, validate all your information and then reboot the server. This is the part where you'll be able to connect to the web interface using the IP address you gave to your server.
+
+https://192.168.xxx.xxx:8006 to connect to said server, if everything was done correctly, you'll have a prompt for a login which you've decided on during the installation.
+
+
+A suggestion I have for new users of Proxmox is to use a post install script, you can follow this guide here:
+https://tteck.github.io/Proxmox/#proxmox-ve-post-install
+
+
+And that's that! You can download ISOs into your local drive, and the LVM drive will be the one to host the VMs, feel free to explore and discover. I also recommend the forums for any technical difficulties.
+
