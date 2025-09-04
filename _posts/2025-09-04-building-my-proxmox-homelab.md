@@ -50,4 +50,4 @@ The primary purpose of this homelab is to possess a secure, isolated lab for exp
 
 Here’s a visual overview of my homelab network setup. The main goal was to keep the lab isolated from the main home network while allowing all virtual machines to communicate with each other. The single NIC on my server is bridged in Proxmox, connecting the VMs to the switch (Which is Pfsense in this case), which lets me experiment with VLANs, routing rules, and firewall configurations via pfSense without affecting other devices at home.
 
-![Proxmox Homelab Network Diagram](assets\lib\Images\Topology.png)
+![Proxmox Homelab Network Diagram](assets\Topology.png)
