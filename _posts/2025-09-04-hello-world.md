@@ -5,7 +5,7 @@ date: 2025-09-04 12:00:00 +0300
 categories: [blog, introduction]
 tags: [hello world, setup, jekyll, website, homelab, cybersecurity]
 ---
-Hello and Welcome!
+Hello and welcome!
 
 This is my little corner of the web where I share what I’m exploring in cybersecurity, homelabs, and penetration testing.
 
