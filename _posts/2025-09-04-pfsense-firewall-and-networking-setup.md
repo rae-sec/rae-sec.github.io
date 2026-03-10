@@ -2,7 +2,10 @@
 layout: post
 title: Pfsense Firewall and Networking setup
 date: 2025-09-04 15:53 +0300
+categories: [homelab, virtualization, networking]
+tags: [proxmox, homelab, virtualization, lab setup, networking]
 ---
+<<<<<<< HEAD
 When building a home cybersecurity lab, one of the most important goals is ensuring that potentially dangerous testing activities remain isolated from the rest of the network. To achieve this, I deployed pfSense as a virtual firewall inside my Proxmox Virtual Environment. This setup allows me to simulate a realistic enterprise-style network architecture while safely separating my internal lab environment from my home network.
 
 **Infrastructure Overview**
@@ -44,3 +47,7 @@ pfSense performs network address translation (NAT) and firewall filtering during
 By introducing pfSense as a virtual firewall, the lab environment becomes fully isolated from the rest of the home network. This is particularly important when performing activities such as vulnerability testing, malware analysis, or penetration testing exercises. Even if a machine within the lab becomes compromised during experimentation, the firewall prevents the threat from spreading to other devices on the home network.
 
 At the same time, my lab can retain controlled internet connectivity, allowing tools to download updates, retrieve threat intelligence feeds, or interact with external services when necessary without risking vulnerability from external networks.
+=======
+
+
+>>>>>>> 36ed79f (Add Favicon)
