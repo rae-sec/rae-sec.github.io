@@ -13,7 +13,7 @@ Within Proxmox, two network bridges were configured to represent these connectio
 
 This structure allows virtual machines to connect either to the external network or to the isolated lab network depending on which bridge they are attached to.
 
-Deploying the pfSense Firewall
+**Deploying the pfSense Firewall**
 
 To enforce network segmentation, I deployed a virtual machine running pfSense. The pfSense VM was configured with two virtual network adapters. The first adapter was connected to vmbr0, which acts as the WAN interface. Through this interface, pfSense receives an IP address from the home router and gains access to the internet.
 
