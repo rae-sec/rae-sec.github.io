@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Home SOC Lab and Detecting an SSH Brute-Force Attack"
+title: "Building a Home SOC Lab and Detecting an SSH Brute-Force Attack Part 2"
 date: 2026-03-15
 categories: cybersecurity
 tags: [SOC, wazuh, lab, blue-team]
