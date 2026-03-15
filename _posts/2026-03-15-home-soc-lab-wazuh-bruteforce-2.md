@@ -44,8 +44,9 @@ Now that it is all out of the way, we can look at the raw logs that Wazuh gather
 Remember the MITRE ID that we found earlier? We can look through MITRE ATT&CK to properly understand what is happening to our poor victim agent by mapping the attack to T1110
 
 A quote from MITRE regarding ID T1110
-'
-Brute force
+
+
+'Brute force
 
 Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or when password hashes are obtained.[[1]](https://www.trendmicro.com/en_us/research/20/l/pawn-storm-lack-of-sophistication-as-a-strategy.html) Without knowledge of the password for an account or set of accounts, an adversary may systematically guess the password using a repetitive or iterative mechanism.[[2]](https://www.dragos.com/wp-content/uploads/CRASHOVERRIDE2018.pdf) Brute forcing passwords can take place via interaction with a service that will check the validity of those credentials or offline against previously acquired credential data, such as password hashes.
 
@@ -57,7 +58,7 @@ Now that the attack has been identified and classified using the **MITRE ATT&CK*
 
 Detection alone is not enough, security teams must also determine how to prevent the attacker from successfully compromising the system. In a real-world environment, analysts would escalate the alert and begin implementing defensive measures to mitigate the threat.
 
-	The first step is to determine whether the attack has already resulted in a successful login. In this case, examining the authentication logs reveals only repeated failed password attempts, indicating that the attacker did not manage to authenticate successfully. However, continuous brute-force attempts can still degrade system performance and may eventually succeed if weak passwords are used.
+The first step is to determine whether the attack has already resulted in a successful login. In this case, examining the authentication logs reveals only repeated failed password attempts, indicating that the attacker did not manage to authenticate successfully. However, continuous brute-force attempts can still degrade system performance and may eventually succeed if weak passwords are used.
 
 Because the attack originated from a single source IP address within the lab network, the most immediate mitigation strategy would be to block the offending address at the firewall or intrusion prevention layer. In enterprise environments, this could be implemented through network firewalls, endpoint security platforms, or automated response mechanisms within the SIEM itself.
 
@@ -72,4 +73,5 @@ Common hardening measures include disabling password authentication entirely and
 Within the context of this lab environment, these defensive strategies demonstrate how monitoring platforms such as **Wazuh** function as part of a larger security ecosystem. While Wazuh successfully detects the suspicious behavior and alerts analysts, it is the responsibility of the security team to interpret these alerts and implement appropriate countermeasures.
 
 The exercise therefore illustrates an important principle in cybersecurity operations: detection systems identify potential threats, but effective security depends on the ability of analysts to interpret alerts and respond accordingly.
+
 
