@@ -31,11 +31,11 @@ Repeated authentication failures within a short time period strongly suggest aut
 
 From a SOC perspective, these alerts represent indicators of a potential brute-force attack as reported by Wazuh automatically, with a severity of 10.
 
-![Wazuh brute force alert](/assets/images/soc-lab/wazuh-alert.png)
+![Wazuh brute force alert](/assets/soc-lab/wazuh-alert.png)
 
 Now, we can delve further into these logs and see who is doing it and gather further information that we can formulize into a proper report. What interests us here is MITRE.ID T1110, but we will look at that shortly after we delve deeper into the report.
 
-![Wazuh alert investigation details](/assets/images/soc-lab/wazuh-analysis.png)
+![Wazuh alert investigation details](/assets/soc-lab/wazuh-analysis.png)
 
 As we can see, there is plenty of data to decipher here and I've highlighted what's most important, firstly mapping the time of the attack is integral to understanding the attacker, are they perhaps attacking during off hours? During a weak point of our infrastructure? (I.E, update periods, etc.), is the attack constant or only in short bursts? Secondly, we can find the victim's IP address and the attacker's IP address, knowing the attacker's IP address helps us understand if it is a single entity doing the attack, or a botnet that is hammering down our system, in this case it was a single machine and we know that it is within our own subnet as IP 10.1.10.20.
 
